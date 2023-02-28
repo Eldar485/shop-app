@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap');
+
+#app {
+    height: 100%;
+}
+.app {
+    height: 100%;
+}
+
+.wrapper {
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    font-family: "Raleway";
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    max-width: 1110px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex: 0 0 auto;
+}
+
+.error-input {
+    position: relative;
+
+    input {
+        border-bottom: 1px solid red !important;
+    }
+    textarea {
+        border-bottom: 1px solid red !important;
+    }
+}
+
+.error-number {
+    input {
+        border: 1px solid red !important;
+    }
+}
+
+.error-text-number {
+    opacity: 0;
+    animation: appearance 1s forwards;
+    color: red;
+    position: absolute;
+    font-size: 1.3rem;
+}
+
+.error-text {
+    opacity: 0;
+    animation: appearance 1s forwards;
+    color: red;
+}
+
+.options {
+    position: fixed;
+    right: 0;
+    top: 10rem;
+}
+
+.admin-panel {
+    border: 1px solid #000000;
+    color: #000000;
+    border-right: none;
+    padding: 1rem 2.3rem;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-bottom: 0.5rem;
+    z-index: 3;
+
+    &:hover {
+        background: #000000;
+        color: #FFFFFF;
+    }
+}
+@keyframes appearance {
+    0% {
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.disabled {
+    background: #9C9C9C;
+
+    &:hover {
+        background: #9C9C9C;
+        cursor: inherit;
+    }
+}
