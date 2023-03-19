@@ -6,7 +6,6 @@
         <div class="product__description">
             <div class="product__price">
                 <div class="product__price-current">${{ product.price }}</div>
-                <div class="product__price-old">$450</div>
             </div>
             <div class="product__size">
                 <div class="product__title">Выберите размер</div>

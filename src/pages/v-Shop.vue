@@ -124,6 +124,7 @@ export default {
                 }
             }
             .btn-page {
+                cursor: pointer;
                 margin-right: 0.5rem;
                 max-width: 5rem;
                 padding: 0.625rem 1rem;
@@ -131,10 +132,10 @@ export default {
             }
         }
         &__list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1.875rem;
-            align-items: center;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, max-content));
+            grid-gap: 24px;
+            justify-items: center;
         }
         .last {
             margin: 4.0625rem 0;
@@ -151,17 +152,34 @@ export default {
     margin: 12.5rem 0;
 }
 
+@media screen and (max-width: 1137px) {
+    .shop {
+        .products {
+            &__list {
+                grid-template-columns: 1fr 1fr;
+                align-content: center;
+
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 735px) {
+    .shop {
+        .products {
+            &__list {
+                grid-template-columns: 1fr;
+                align-content: center;
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 1110px) {
     .shop {
         &__filters {
             .btn-filter {
                 margin-bottom: 1rem;
-            }
-        }
-        .products {
-            &__list {
-                margin: 0 auto;
-                max-width: 45rem;
             }
         }
     }
@@ -178,24 +196,10 @@ export default {
                 padding: 1.25rem 1.0625rem;
             }
         }
-        .products {
-            &__list {
-                justify-content: center;
-            }
-        }
     }
 }
 
 @media screen and (max-width: 400px) {
-    .shop {
-        .products {
-            .item {
-                &__image {
-                    max-width: 20rem;
-                    width: 20rem;
-                }
-            }
-        }
-    }
+
 }
 </style>

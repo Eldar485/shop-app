@@ -9,7 +9,7 @@ export const shopModule = {
         currentProduct: [],
         currentPage: localStorage.getItem('currentPage') || 1,
         totalProductCount: 1,
-        limit: 3,
+        limit: 7,
         filters: [{id: '0', name: 'Все'}],
         currentFilter: localStorage.getItem('currentFilter') || 0,
         newCollection: []

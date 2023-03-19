@@ -40,6 +40,7 @@ export default {
     top: 80px;
     right: 16px;
     z-index: 3;
+    min-width: 20rem;
 
     &__content {
         min-width: 10rem;

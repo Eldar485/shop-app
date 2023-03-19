@@ -97,4 +97,12 @@ export default {
         opacity: 0;
     }
 }
+
+@media (max-width: 900px) {
+    .table {
+        &__row {
+            overflow: auto;
+        }
+    }
+}
 </style>

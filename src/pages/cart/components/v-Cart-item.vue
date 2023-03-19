@@ -79,9 +79,14 @@ img {
         width: 12px;
         height: 12px;
         cursor: pointer;
+        margin-right: 1rem;
     }
     &__name {
         max-width: 7rem;
+        margin-left: 1rem;
+    }
+    &__price {
+        text-align: center;
     }
     & > * {
         min-width: 7rem;

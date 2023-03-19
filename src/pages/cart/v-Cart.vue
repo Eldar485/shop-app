@@ -5,10 +5,10 @@
             <v-cart :getCartProducts="getCartProducts"></v-cart>
         </div>
         <div class="cart__buttons">
-            <div class="promo">
-                <v-input placeholder="Введите купон" style-type="input-text"/>
-                <v-button style-type="btn-success">Применить купон</v-button>
-            </div>
+<!--            <div class="promo">-->
+<!--                <v-input placeholder="Введите купон" style-type="input-text"/>-->
+<!--                <v-button style-type="btn-success" @click="sendCoupon">Применить купон</v-button>-->
+<!--            </div>-->
             <v-button style-type="btn-success">Обновить корзину</v-button>
         </div>
         <div class="cart__result">
@@ -37,17 +37,25 @@
 
 <script>
 import VCart from "@/pages/cart/components/v-Cart-table";
-import VInput from "@/core/components/UI/v-Input";
 import VButton from "@/core/components/UI/v-Button";
 import VMainTitle from "@/core/components/UI/v-Main-title";
 import {mapGetters} from "vuex";
 export default {
-    components: {VMainTitle, VButton, VInput, VCart},
+    components: {VMainTitle, VButton, VCart},
     computed: {
         ...mapGetters({
             getCartProducts: 'shop/getCartProducts',
             getFullPrice: 'shop/getFullPrice'
         })
+    },
+    methods: {
+        // sendCoupon() {
+        //     this.$notification({
+        //         title: 'Успешно',
+        //         description: 'Купон применён',
+        //         type: 'success'
+        //     })
+        // }
     }
 }
 </script>
@@ -123,5 +131,25 @@ export default {
 
 .main-title {
     margin: 12.5rem 0;
+}
+
+@media (max-width: 900px) {
+    .cart {
+        &__table {
+            overflow: auto;
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .result {
+        flex-direction: column;
+
+        .stat {
+            height: 4rem;
+            width: 200px;
+            margin-bottom: 1rem;
+        }
+    }
 }
 </style>

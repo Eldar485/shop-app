@@ -3,7 +3,7 @@
       <div class="preview">
           <v-carousel data_type="info" :carousel_data="slide"></v-carousel>
       </div>
-      <v-preview></v-preview>
+      <v-preview class="preview__image"></v-preview>
       <div class="title">Новая коллекция</div>
       <new-collection></new-collection>
       <VButton class="main__button" style-type="btn-success" @click="$router.push('/shop')">Открыть магазин</VButton>
@@ -69,6 +69,13 @@ export default {
             font-weight: 500;
             font-size: 1.5rem;
             margin-bottom: 4.2rem;
+        }
+    }
+}
+@media screen and (max-width: 1270px) {
+    .main {
+        .preview__image {
+            display: none;
         }
     }
 }

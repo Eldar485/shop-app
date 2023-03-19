@@ -8,7 +8,7 @@
             <div class="options">
                 <div class="admin-panel" v-if="!getAuth.auth" @click="$router.push('/authorization')">Войти</div>
                 <div class="admin-panel" v-if="getAuth.auth" @click="exit()">Выйти</div>
-                <div class="admin-panel" @click="switchLang()">{{ locale }}</div>
+<!--                <div class="admin-panel" @click="switchLang()">{{ locale }}</div>-->
                 <div class="admin-panel" v-if="getAuth.auth && getAuth.role === 'ADMIN'" @click="$router.push('/admin')">Админ</div>
             </div>
             <div class="content">
@@ -69,10 +69,10 @@ export default {
             localStorage.removeItem('token');
             this.$router.push('/')
         },
-        switchLang() {
-            this.locale === 'en' ? this.locale = 'ru' : this.locale = 'en'
-            localStorage.setItem('lang', this.locale)
-        },
+        // switchLang() {
+        //     this.locale === 'en' ? this.locale = 'ru' : this.locale = 'en'
+        //     localStorage.setItem('lang', this.locale)
+        // },
         ...mapMutations({
             setAuth: 'auth/setAuth',
             setPage: 'shop/setPage'
