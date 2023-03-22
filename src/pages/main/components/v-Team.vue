@@ -19,7 +19,7 @@ export default {
     data() {
         return {
             slide: [
-                { id: 1, name: 'img1', img: '1.jpg' },
+                { id: 1, name: 'img1', img: '3.jpg' },
                 { id: 2, name: 'img2', img: '2.jpg' },
                 { id: 3, name: 'img3', img: 'product-item_2.jpg' },
             ]

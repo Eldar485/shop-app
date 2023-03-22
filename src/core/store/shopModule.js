@@ -81,7 +81,7 @@ export const shopModule = {
                 commit('setProducts', response.data.rows)
                 commit('totalProductCount', response.data.count)
             } catch (e) {
-                this.$notification({
+                globals.$notification({
                     title: 'Ошибка',
                     description: 'Ошибка при подгрузки товаров',
                     type: 'error'
@@ -105,10 +105,10 @@ export const shopModule = {
                 const response = await fetchFilters()
                 commit('setFilters', response.data)
             } catch (e) {
-                this.$notification({
+                globals.$notification({
                     title: 'Ошибка',
                     description: 'Ошибка при подгрузке фильтров',
-                    type: 'warning'
+                    type: 'error'
                 })
             }
         }
